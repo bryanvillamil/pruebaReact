@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { MuiThemeProvider } from 'material-ui/styles';
 import * as todoActions from '../actions/todos';
+import Paper from 'material-ui/Paper';
 
 import Header from '../components/Header';
 import TodoList from '../components/TodoList';
@@ -10,7 +11,7 @@ import TodoList from '../components/TodoList';
 const TodoApp = ({todos, actions}) => (
   <MuiThemeProvider>
     <div className="container" style={styles.container}>
-      <div
+      <Paper
         className="box-caja"
         zDepth={2}
         style={styles.paper}
@@ -20,7 +21,7 @@ const TodoApp = ({todos, actions}) => (
           todos={todos}
           actions={actions}
         />
-      </div>
+      </Paper>
     </div>
   </MuiThemeProvider>
 );
@@ -29,6 +30,9 @@ const styles = {
   container: {
     display: 'flex',
     justifyContent: 'center',
+  },
+  paper: {
+    
   },
 };
 
